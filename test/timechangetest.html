@@ -3,15 +3,12 @@
   <head>
     <title>현재시간</title>
       <script language="javascript">
-        var inittime = new Date(); //최초로 문서를 열어본 시각
+        var inittime = Date.now(); //최초로 문서를 열어본 시각
         function time(){
           var time= new Date(); //시간받기위해서 new date
-          var diff = (time.getSeconds()) - (inittime.getSeconds());
-          document.getElementById("sub").innerHTML=diff>=0?diff:"60초 이상";
+          var diff = (time-inittime)/1000;
+          document.getElementById("sub").innerHTML=diff;
           if(diff > 10){
-            document.getElementById("now").innerHTML="보고있어";
-          }
-          else if((diff<0)&&((60+diff)>10)){
             document.getElementById("now").innerHTML="보고있어";
           }
           else{
