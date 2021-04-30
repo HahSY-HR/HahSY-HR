@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>현재시간</title>
+      <script language="javascript">
+        var inittime = new Date(); //최초로 문서를 열어본 시각
+        function time(){
+          var time= new Date(); //시간받기위해서 new date
+          document.getElementById("sub").innerHTML=(time.getSeconds()) - (inittime.getSeconds());
+          var diff = (time.getSeconds()) - (inittime.getSeconds());
+          if(diff > 10){
+            document.getElementById("now").innerHTML="보고있어";
+          }
+          else if((diff<0)&&((60+diff)>10)){
+            document.getElementById("now").innerHTML="보고있어";
+          }
+          else{
+            document.getElementById("now").innerHTML=time.getSeconds()+"초";
+          }
+         setInterval("time()",1000);     //1초 지난후 time()실행
+        }
+    </script>
+  </head>
+  <body onload="time()">
+    <h2> 현재 시간: <span id="now"></span></h2>
+    <h2> 시간차: <span id="sub"></span></h2>
+  </body>
+</html>
