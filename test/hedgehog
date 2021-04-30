@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>이미지반영</title>
+  </head>
+  <body onload="time()">
+    <h2><span id="now"></span></h2>
+    <h2><img src = 'image/pc-keller-hedgehog.jpg'></h2>
+    <br>
+    <p>&nbsp;&nbsp;&nbsp;<span id="here2"></span></p>
+    <br>
+    <p><span id="image_id"></span></p>
+    <br>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="here"></span></p>
+  </body>
+</html>
