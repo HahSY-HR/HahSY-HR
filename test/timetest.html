@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>현재시간2</title>
+      <script language="javascript">
+        var ran1 = Math.floor(Math.random() * 5);
+        var ran2 = Math.floor(Math.random() * 5); // 각각 5초 이하의 랜덤한 정수 숫자
+        var inittime = Date.now(); //최초로 문서를 열어본 시각
+        
+        function time(){
+          var time= new Date(); //시간받기위해서 new date
+          var diff = Math.round((time-inittime)/1000);
+          document.getElementById("sub").innerHTML="시간차: "+diff;
+          if(diff == 5){
+            document.getElementById("here").innerHTML="똑딱";
+          }
+          else if(diff == 7){
+            document.getElementById("here2").innerHTML="똑";
+          }
+          else if((diff == 8)||(diff == 9)){
+            document.getElementById("here2").innerHTML="똑 딱";
+          }
+          else if(diff >= 9+ran1){
+            document.getElementById("now").innerHTML="현재 시간: 이런 거 별로야?";
+          }
+          else if(diff >= 9+ran1+3){
+            document.getElementById("now").innerHTML="창 안 끄는 게 좋을걸.";
+          }
+          else if(diff >= 9+ran1+3+ran2){
+            document.getElementById("now").innerHTML="착각 아니야.";
+          }
+          else if(diff >= 9+ran1+3+ran2+3){
+            document.getElementById("now").innerHTML="";
+            document.getElementById("sub").innerHTML="또 보자.";
+          }
+          else if(diff >= 9+ran1+3+ran2+5){
+            document.getElementById("now").innerHTML="";
+            document.getElementById("sub").innerHTML="꼭";
+          }
+          else{
+            document.getElementById("here").innerHTML="";
+            document.getElementById("here2").innerHTML="";
+            document.getElementById("now").innerHTML="현재 시간: "+time.getSeconds()+"초";
+          }
+         setInterval("time()",1000);     //1초 지난후 time()실행
+        }
+        
+    </script>
+  </head>
+  <body onload="time()">
+    <h2><span id="now"></span></h2>
+    <h2><span id="sub"></span></h2>
+    <br>
+    <p>&nbsp;&nbsp;&nbsp;<span id="here2"></span></p>
+    <br>
+    <br>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="here"></span></p>
+  </body>
+</html>
