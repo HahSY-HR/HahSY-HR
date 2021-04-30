@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>현재시간2</title>
+    <title>현재시간3</title>
       <script language="javascript">
         var ran1 = Math.floor(Math.random() * 5);
         var ran2 = Math.floor(Math.random() * 5); // 각각 5초 이하의 랜덤한 정수 숫자
@@ -51,7 +51,7 @@
          setInterval("time()",1000);     //1초 지난후 time()실행
         }
         function ShowImg(strImage){
-          documnet.getElementById("image_id").src = strImage;
+          documnet.getElementById("image_id").innerHTML = strImage;
         }
         var path = "<img src='image/pc-keller-hedgehog.jpg' align='center' hspace='10' vspace'10' style='max-width: 98%; height: auto;'>";
         setTimeout({ShowImg("path")}, (19+ran1+ran2)*1000);
