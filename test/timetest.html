@@ -20,22 +20,22 @@
           else if((diff == 8)||(diff == 9)){
             document.getElementById("here2").innerHTML="똑 딱";
           }
-          else if(diff >= 9+ran1){
-            document.getElementById("now").innerHTML="현재 시간: 이런 거 별로야?";
-          }
-          else if(diff >= 9+ran1+3){
-            document.getElementById("now").innerHTML="창 안 끄는 게 좋을걸.";
-          }
-          else if(diff >= 9+ran1+3+ran2){
-            document.getElementById("now").innerHTML="착각 아니야.";
+          else if(diff >= 9+ran1+3+ran2+5){
+            document.getElementById("now").innerHTML="";
+            document.getElementById("sub").innerHTML="꼭";
           }
           else if(diff >= 9+ran1+3+ran2+3){
             document.getElementById("now").innerHTML="";
             document.getElementById("sub").innerHTML="또 보자.";
           }
-          else if(diff >= 9+ran1+3+ran2+5){
-            document.getElementById("now").innerHTML="";
-            document.getElementById("sub").innerHTML="꼭";
+          else if(diff >= 9+ran1+3+ran2){
+            document.getElementById("now").innerHTML="착각 아니야.";
+          }
+          else if(diff >= 9+ran1+3){
+            document.getElementById("now").innerHTML="창 안 끄는 게 좋을걸.";
+          }
+          else if(diff >= 9+ran1){
+            document.getElementById("now").innerHTML="현재 시간: 이런 거 별로야?";
           }
           else{
             document.getElementById("here").innerHTML="";
