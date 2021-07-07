@@ -10,7 +10,7 @@
           var diff = Math.round((time-inittime)/1000);
           document.getElementById("sub").innerHTML=diff;
           if(diff > 10){
-            document.getElementById("now").innerHTML="보고있어";
+            document.getElementById("now").innerHTML="<span style=\"color: red\">보고있어</span>";
           }
           else{
             document.getElementById("now").innerHTML=time.getSeconds()+"초";
